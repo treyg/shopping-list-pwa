@@ -7,19 +7,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet"  type="text/css" href="style.css">
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     </head>
     <body>
-       <h1>Shopping List</h1>
+    <div class="container">
+        <img src="images\eclipse.svg" class="eclipse" alt="">
+            <div class="header">
+                <h1>Shopping List</h1>
+                <img src="images/Vector.svg" alt="">
+            </div>
+        <div class="body">
+           
+            <ul id="list">
 
-       <input  id="userInput" type="text" placeholder="enter items">
-       <button id="enter">Enter</button>
-
-       <ul id="list">
-          
-       </ul>
-       
-       <button id="removeItem">Remove finished items</button>
+            </ul>
+            <div class="input-container">
+                <input  id="userInput" type="text" placeholder="Enter item here">
+                <button id="enter"><img src="images\add.svg" alt=""></button>
+            </div>    
+            <button id="removeItem">Remove Items</button>
+        </div>
+    </div>
 
         <script src="script.js" type="text/javascript"></script>
     </body>
