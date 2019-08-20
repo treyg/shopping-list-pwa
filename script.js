@@ -16,7 +16,7 @@ function createListElement() {
         ul.appendChild(li);
         li.appendChild(cb) //append the checkbox to the ul element
         input.value = "";                       //Return input to empty after li is added
-        li.addEventListener('click',() => {            //Add event listener on click to toggle css strike through class         
+        cb.addEventListener('click',() => {            //Add event listener on click to toggle css strike through class         
                 li.classList.toggle('strikethrough');  
         })
                       
@@ -29,6 +29,7 @@ function createCheckBox(checked = false) {
         cb.classList.add('checkstyle')
         return cb 
 }
+
 
 
 
