@@ -18,9 +18,9 @@ function createListElement() {
         input.value = "";                       //Return input to empty after li is added
         cb.addEventListener('click',() => {            //Add event listener on click to toggle css strike through class         
                 li.classList.toggle('strikethrough');  
-        })
-                      
+        })           
 }
+
 
 function createCheckBox(checked = false) {
         const cb = document.createElement('input')
@@ -29,6 +29,7 @@ function createCheckBox(checked = false) {
         cb.classList.add('checkstyle')
         return cb 
 }
+
 
 
 

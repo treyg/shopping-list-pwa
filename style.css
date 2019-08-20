@@ -76,7 +76,7 @@ h1 {
 }
 
 .list-area {
-    max-height: 62vh;
+    max-height: 58vh;
     overflow-y: auto;
     margin-top: 20px;
     width: 85%;
