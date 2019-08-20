@@ -19,6 +19,8 @@ function createListElement() {
                             
 }
 
+
+
 function addListAfterClick() {
         if(inputLength() > 0) {            //If input length is greater than zero, run function to create list element
             createListElement();             
