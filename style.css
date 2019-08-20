@@ -54,6 +54,7 @@ h1 {
     margin-left: 19px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: 400;
 }
 
 .header img {
@@ -69,11 +70,10 @@ h1 {
     color: rgba(0, 0, 0, 0.95);
     font-size: 20px;
     line-height: 23px;
-    box-shadow: 0px -10px 30px -2px rgba(0,0,0,0.28);
+    box-shadow: 0px -5px 30px -2px rgba(0,0,0,0.28);
     z-index: 1;
     
 }
-
 
 .list-area {
     max-height: 62vh;
@@ -84,6 +84,31 @@ h1 {
     margin-right: auto;
 }
 
+input[type="checkbox"] { 
+    cursor: pointer;
+    
+}
+
+input:checked {
+    
+}
+
+.checkstyle {
+    margin-right: 13px;
+    transform: scale(1.5);
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    border-radius: 3px;
+    vertical-align: middle;
+    border: 1px solid rgb(5, 5, 5);
+    -webkit-appearance: none;
+    
+}
+
+.checkstyle:checked {
+    background-color: black;
+}
 
 
 ul {
@@ -95,12 +120,15 @@ ul {
 }
 
 li {
+    display: flex;
+    flex-direction: row-reverse;
     font-size: 20px;
     border-bottom: 1px solid #ECECEC;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     padding-top: 15px;
-    
+    margin-right: auto;
 }
+
 
 #removeItem {
     color: #A3A2A2;
@@ -114,13 +142,11 @@ li {
     text-align: end;
 }
 
-
-
- .input-container  {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 85%;
+.input-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -129,7 +155,7 @@ li {
     margin-bottom: 47px;
 }
 
-input {
+#userInput {
     height: 32px;
     border: none;
     border-bottom: 1px solid #E5E5E5;
