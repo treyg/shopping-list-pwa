@@ -11,14 +11,17 @@ function inputLength() {                              // Check to make sure inpu
 function createListElement() {
         var li = document.createElement("li");       //Create li element       
         var cb = createCheckBox();
-        
+
         li.appendChild(document.createTextNode(input.value)); // add the value of the input variable (li element) to the document at the end of ul
         ul.appendChild(li);
         li.appendChild(cb) //append the checkbox to the ul element
         input.value = "";                       //Return input to empty after li is added
         cb.addEventListener('click',() => {            //Add event listener on click to toggle css strike through class         
                 li.classList.toggle('strikethrough');  
-        })           
+        })
+        
+        var hr = document.createElement('hr')
+hr.appendChild(li)
 }
 
 
@@ -29,6 +32,7 @@ function createCheckBox(checked = false) {
         cb.classList.add('checkstyle')
         return cb 
 }
+
 
 
 
