@@ -36,7 +36,7 @@ body {
 
 .eclipse {
     position: absolute;
-    transform: translate(160%, -60%);
+    transform: translate(140%, -60%);
     z-index: 0;
 }
  
@@ -89,9 +89,6 @@ input[type="checkbox"] {
     
 }
 
-input:checked {
-    
-}
 
 .checkstyle {
     margin-right: 13px;
@@ -102,12 +99,12 @@ input:checked {
     border-radius: 3px;
     vertical-align: middle;
     border: 1px solid rgb(5, 5, 5);
-    -webkit-appearance: none;
+    -webkit-appearance: noe;
     
 }
 
 .checkstyle:checked {
-    background-color: black;
+    background-color: rgb(55, 235, 70); 
 }
 
 
@@ -154,6 +151,7 @@ li {
     right: 0;
     margin: auto;
     margin-bottom: 47px;
+    background-color: white;
 }
 
 #userInput {
