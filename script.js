@@ -19,6 +19,7 @@ function createListElement() {
     //Add event listener on click to toggle css strike through class
     li.classList.toggle("strikethrough");
   });
+  
 }
 
 function createCheckBox(checked = false) {
