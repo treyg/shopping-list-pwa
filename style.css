@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-a:focus,button:focus,input:focus,textarea:focus {outline: none;}
+a:focus,button:focus,input:focus,textarea:focus {outline: none !important;}
 
 :root {
     --primary-blue: #2962ff;
@@ -28,7 +28,7 @@ a:focus,button:focus,input:focus,textarea:focus {outline: none;}
     background-color: var(--primary-blue);
     color: #FFFFFF;
     overflow: hidden;
-    max-width:600px;
+    max-width:400px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.3);
@@ -87,10 +87,11 @@ h1 {
 
 input[type="checkbox"] { 
     cursor: pointer;
-    
+    margin-right: 13px;
+    transform: scale(1.1);
 }
 
-
+/* 
 .checkstyle {
     margin-right: 13px;
     transform: scale(1.5);
@@ -106,7 +107,7 @@ input[type="checkbox"] {
 
 .checkstyle:checked {
     background-color: rgb(55, 235, 70); 
-}
+} */
 
 
 ul {
@@ -126,6 +127,7 @@ li {
     padding-bottom: 10px;
     padding-top: 15px;
     margin-right: auto;
+    text-transform: capitalize;
 }
 
 
