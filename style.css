@@ -156,6 +156,8 @@ li {
     margin: auto;
     margin-bottom: 47px;
     background-color: white;
+    border: 2px solid red;
+    height: 150px; 
 }
 
 #userInput {
