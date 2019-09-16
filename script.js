@@ -2,6 +2,17 @@ var button = document.getElementById("enter"); //Store selected elements as vari
 var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 
+
+
+let list = []
+
+const listJSON = localStorage.getItem('list')
+
+if (listJSON !== null) {
+    list = JSON.parse(listJSON)
+}
+
+
 function inputLength() {
   // Check to make sure input has a value
   return input.value.length;
@@ -10,7 +21,6 @@ function inputLength() {
 function createListElement() {
   var li = document.createElement("li"); //Create li element
   var cb = createCheckBox();
-
   li.appendChild(cb); //append the checkbox to the ul element
   li.appendChild(document.createTextNode(input.value)); // add the value of the input variable (li element) to the document at the end of ul
   ul.appendChild(li);
@@ -20,7 +30,16 @@ function createListElement() {
     li.classList.toggle("strikethrough");
   });
   
+  // push ul text content to list array
+  list.push(li.textContent)
+
+  //Save list array to local storage
+  localStorage.setItem('list', JSON.stringify(list))
+
 }
+
+
+
 
 function createCheckBox(checked = false) {
   const cb = document.createElement("input");
@@ -61,3 +80,8 @@ function removeElt() {
 var remove = document.getElementById("removeItem"); //create variable for remove button
 
 remove.addEventListener("click", removeElt); //on click for button, run function to remove selected items
+
+
+getList = function () {
+  
+}
