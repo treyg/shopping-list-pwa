@@ -114,6 +114,15 @@ li {
     text-transform: capitalize;
 }
 
+.remove-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 #removeItem {
     color: #525a68;
@@ -123,10 +132,17 @@ li {
     padding: 10px 15px;
     background-color: #cad5e0 !important;
     width: auto;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: 5%;
-    text-align: end;
+   
+}
+
+#selectAll {
+    color: #525a68;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: auto;
 }
 
 .input-container  {
@@ -141,7 +157,6 @@ li {
     margin: auto;
     margin-bottom: 20px;
     background-color: white;
-    border: 1px solid;
 }
 
 #userInput {

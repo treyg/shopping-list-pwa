@@ -2,8 +2,10 @@
 var button = document.getElementById("enter"); 
 var input = document.getElementById("userInput");
 var ul = document.querySelector("#list");
+const removeButtons = document.querySelector('.remove-buttons');
 
 
+// removeButtons.style.visibility = "hidden"
 
 function inputLength() {
   // Check to make sure input has a value
@@ -23,7 +25,6 @@ function createListElement() {
     li.classList.toggle("strikethrough");
   });
   
-  // push ul text content to list array
   if(localStorage.list === undefined){
     localStorage.setItem("list", input.value.trim() + ',');
   }else{
@@ -31,7 +32,8 @@ function createListElement() {
   }
   input.value = ""; //Return input to empty after li is added
 
-  li.contentEditable = 'true'
+  // removeButtons.style.visibility = "visible"
+
 }
 
 
@@ -41,9 +43,21 @@ function createCheckBox(checked = false) {
   const cb = document.createElement("input");
   cb.type = "checkbox";
   cb.checked = false;
-  cb.classList.add("checkstyle");
+  cb.className = "box"
   return cb;
 }
+
+function selectAllItems() {
+  var items = document.getElementsByClassName('box');
+  for (var i = 0; i < items.length; i++) {
+      if (items[i].type == 'checkbox')
+          items[i].checked = !items[i].checked;
+      
+  }
+    ul.classList.toggle('strikethrough')
+}
+
+
 
 function addListAfterClick() {
   if (inputLength() > 0) {
@@ -64,32 +78,15 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress); 
 
 //button to remove selected elements
+ 
 
-function removeElt() {
-  // create function to remove seleted items
-  // create var for all elements with strikethrough class
-  var doneItems = document.getElementsByClassName("strikethrough"); 
-  console.log(doneItems);
-
-  /*for (let i = 0 ; i < doneItems.length ; i++) {
-      //for eache strikethrough element with length > 0, remove
-    console.log( 'removeELT' + doneItems[i].textContent); 
-    let patt = new RegExp(doneItems[i].textContent+',', "g");
-    localStorage.setItem("list", list.replace(patt, ""));
-   doneItems[i].parentNode.removeChild(doneItems[i]);
-  }*/
-  while (doneItems.length > 0) {
-    let patt = new RegExp(doneItems[0].textContent+',', "g");
-    localStorage.setItem("list", localStorage.list.replace(patt, ""));
-    doneItems[0].parentNode.removeChild(doneItems[0]); 
-  }
-
-}
 //create variable for remove button
 var remove = document.getElementById("removeItem"); 
 //on click for button, run function to remove selected items
 remove.addEventListener("click", removeElt); 
 
+
+//Pull list from local storage. Function ran on page load
 function loadFromLocaleStorage(){
   if (localStorage.list){
     localStorage.list.split(',').forEach(item => {
@@ -106,7 +103,9 @@ function loadFromLocaleStorage(){
   }
 }
 
-localStorage.clear();
+
+
+
 
 
 
