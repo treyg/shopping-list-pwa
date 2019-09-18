@@ -104,6 +104,8 @@ function loadFromLocaleStorage(){
   }
 }
 
+localStorage.clear();
+
 
 
 
