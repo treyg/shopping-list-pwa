@@ -30,6 +30,8 @@ function createListElement() {
     localStorage.list = localStorage.list.concat(input.value.trim() + ',');
   }
   input.value = ""; //Return input to empty after li is added
+
+  li.contentEditable = 'true'
 }
 
 
