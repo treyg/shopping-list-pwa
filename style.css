@@ -139,8 +139,9 @@ li {
     left: 0;
     right: 0;
     margin: auto;
+    margin-bottom: 20px;
     background-color: white;
-    height: 150px; 
+    border: 1px solid;
 }
 
 #userInput {
