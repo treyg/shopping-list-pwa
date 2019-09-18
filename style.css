@@ -132,7 +132,7 @@ li {
     padding: 10px 15px;
     background-color: #cad5e0 !important;
     width: auto;
-   
+    margin-left: auto;
 }
 
 #selectAll {

@@ -25,6 +25,7 @@ function createListElement() {
     li.classList.toggle("strikethrough");
   });
   
+  // push ul text content to list array
   if(localStorage.list === undefined){
     localStorage.setItem("list", input.value.trim() + ',');
   }else{
@@ -59,6 +60,7 @@ function selectAllItems() {
 
 
 
+
 function addListAfterClick() {
   if (inputLength() > 0) {
     //If input length is greater than zero, run function to create list element
@@ -78,7 +80,19 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress); 
 
 //button to remove selected elements
- 
+
+function removeElt() {
+  // create function to remove seleted items
+  // create var for all elements with strikethrough class
+  var doneItems = document.getElementsByClassName("strikethrough"); 
+  
+  while (doneItems.length > 0) {
+    let patt = new RegExp(doneItems[0].textContent+',', "g");
+    localStorage.setItem("list", localStorage.list.replace(patt, ""));
+    doneItems[0].parentNode.removeChild(doneItems[0]); 
+  }
+
+}
 
 //create variable for remove button
 var remove = document.getElementById("removeItem"); 
