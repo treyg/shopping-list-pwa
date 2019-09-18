@@ -78,9 +78,10 @@ h1 {
 }
 
 .list-area {
-    max-height: 58vh;
+    max-height: 51vh;
     overflow-y: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
@@ -91,24 +92,6 @@ input[type="checkbox"] {
     margin-right: 13px;
     transform: scale(1.1);
 }
-
-/* 
-.checkstyle {
-    margin-right: 13px;
-    transform: scale(1.5);
-    width: 1em;
-    height: 1em;
-    background-color: white;
-    border-radius: 3px;
-    vertical-align: middle;
-    border: 1px solid rgb(5, 5, 5);
-    -webkit-appearance: none;
-    
-}
-
-.checkstyle:checked {
-    background-color: rgb(55, 235, 70); 
-} */
 
 
 ul {
@@ -134,7 +117,7 @@ li {
 
 #removeItem {
     color: #525a68;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -156,7 +139,6 @@ li {
     left: 0;
     right: 0;
     margin: auto;
-    margin-bottom: 5%;
     background-color: white;
     height: 150px; 
 }
