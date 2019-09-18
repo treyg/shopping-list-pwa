@@ -20,7 +20,7 @@
 
  
     </head>
-    <body onload="getList()">
+    <body onload="loadFromLocaleStorage()">
     <div class="container">
         <img src="images\eclipse.svg" class="eclipse" alt="">
             <div class="header">
@@ -30,11 +30,10 @@
         <div class="body">
            <div class="list-area">
                 <ul id="list">
-
                 </ul>
            </div>
             <div class="input-container">
-                <input  id="userInput" type="text"  placeholder="Enter item here">
+                <input  id="userInput" type="text"  placeholder="Enter items">
                 <button id="enter"><img src="images\add.svg" alt=""></button>
             </div>    
             <button id="removeItem">Clear completed</button>
@@ -42,6 +41,6 @@
     </div>
 
         <script async src="script.js" type="text/javascript"></script>
-        
+    
     </body>
 </html>
