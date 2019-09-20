@@ -4,7 +4,9 @@ var input = document.getElementById("userInput");
 var ul = document.querySelector("#list");
 const removeButtons = document.querySelector('.remove-buttons');
 
-body.requestFullscreen()
+function full () {
+  document.requestFullscreen()
+}
 // removeButtons.style.visibility = "hidden"
 
 function inputLength() {
