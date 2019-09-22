@@ -4,9 +4,7 @@ var input = document.getElementById("userInput");
 var ul = document.querySelector("#list");
 const removeButtons = document.querySelector('.remove-buttons');
 
-function full () {
-  document.requestFullscreen()
-}
+
 // removeButtons.style.visibility = "hidden"
 
 function inputLength() {
@@ -51,13 +49,15 @@ function createCheckBox(checked = false) {
 }
 
 function selectAllItems() {
-  var items = document.getElementsByClassName('box');
-  for (var i = 0; i < items.length; i++) {
-      if (items[i].type == 'checkbox')
-          items[i].checked = !items[i].checked;
-      
+  var checkBoxes = ul.getElementsByClassName("box")
+  for (var i = 0; i < checkBoxes.length; i++) {
+      if (checkBoxes[i].type == 'checkbox')
+          checkBoxes[i].checked = true;
+   }
+  var lists = ul.getElementsByTagName("li")
+  for (var i = 0; i< lists.length; i++){
+    lists[i].classList.toggle("strikethrough");
   }
-    ul.classList.toggle('strikethrough')
 }
 
 
@@ -118,12 +118,4 @@ function loadFromLocaleStorage(){
     });
   }
 }
-
-
-
-
-
-
-
-
 
