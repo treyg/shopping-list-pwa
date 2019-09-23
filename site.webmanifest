@@ -1,6 +1,6 @@
 {
-    "name": "Shopping List",
-    "short_name": "Shopping List",
+    "name": "Simple Shopper",
+    "short_name": "Simple Shopper",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
