@@ -167,8 +167,11 @@ li {
     width: 78%;
     color: rgba(0, 0, 0,);
     font-size: 20px;
-    line-height: 5px;
+    
 }
+
+
+
 
 .input-container button {
     display: inline-flex;
